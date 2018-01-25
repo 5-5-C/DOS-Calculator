@@ -1,0 +1,298 @@
+html {
+  box-sizing: border-box;
+  color: #222;
+  font-size: 1em; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical; }
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+.clearfix:after {
+  content: "";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both; }
+
+.calculator {
+  font-family: MorePerfectDOSVGA;
+  position: absolute;
+  font-size: 0.85rem;
+  color: white;
+  background-color: black;
+  box-shadow: 15px 15px 0px 0px rgba(70, 70, 70, 0.75); }
+
+.calculator__frame {
+  border: white double;
+  border-width: 5px;
+  margin: 6px 2px;
+  width: 300px;
+  height: 290px; }
+
+.calculator__result-display {
+  font-size: 1rem;
+  margin: 8px 8px 0 8px;
+  padding-right: 80px;
+  color: black;
+  background-color: #afa8af; }
+
+.calculator__item {
+  list-style: none; }
+  .calculator__item p {
+    float: right; }
+
+.calculator__grid {
+  margin-bottom: 16px;
+  margin-top: 0; }
+
+#term-result {
+  padding-right: 18px; }
+
+.display-line {
+  visibility: hidden;
+  position: relative;
+  height: 1px;
+  width: 260px;
+  background-color: black;
+  top: -8px;
+  margin-right: -180px; }
+
+.display-scroll {
+  position: absolute;
+  margin-left: 280px;
+  margin-top: -68px;
+  height: 64px;
+  width: 9px;
+  background: url(https://res.cloudinary.com/dt4qeehms/image/upload/v1492049775/calculator/bar.jpg);
+  background-size: cover; }
+
+.display-scroll-top {
+  position: relative;
+  height: 20px;
+  top: 0px; }
+
+.display-scroll-bottom {
+  position: relative;
+  margin-top: 24px;
+  height: 20px; }
+
+.calculator__input-display {
+  font-size: 1rem;
+  border-top: solid 1px white;
+  padding: 6px 2px;
+  border-bottom: solid 1px white;
+  margin: 8px 4px; }
+  .calculator__input-display p {
+    float: right;
+    font-weight: bold; }
+
+.blink-cursor:after {
+  content: '_';
+  -webkit-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite; }
+
+.calculator__keypad {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 8px 8px 0 8px;
+  background-color: #505750;
+  padding: 16px 8px 4px 8px; }
+
+.key {
+  font-size: 1rem;
+  font-family: MorePerfectDOSVGA;
+  border: none;
+  margin-top: 0;
+  margin-right: 21px;
+  margin-bottom: 14px;
+  margin-top: 0;
+  width: 30px;
+  height: 18px;
+  box-shadow: 10px 10px 0px 0px black;
+  text-align: center;
+  position: relative;
+  outline: none; }
+
+.keypad__digits {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .keypad__digits button {
+    background-color: #0000af;
+    color: #ffff50; }
+
+#key-0 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+
+.keypad__process-keys {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .keypad__process-keys button {
+    background-color: #00a800;
+    color: #50ffff; }
+
+.keypad__operators {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .keypad__operators button {
+    line-height: 1;
+    font-size: 1.1rem; }
+
+.keypad__functions {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+#key-result {
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2; }
+
+#key-clr, #key-sign {
+  padding: 0; }
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent; }
+  50% {
+    color: white; } }
+
+@keyframes "blink" {
+  from, to {
+    color: transparent; }
+  50% {
+    color: white; } }
+
+.footer {
+  font-family: MorePerfectDOSVGA;
+  position: absolute;
+  bottom: 0;
+  background-color: #aca9b2;
+  height: 18px;
+  width: 100%; }
+
+.footer__credit {
+  float: right;
+  margin-top: 4px;
+  margin-right: 12px;
+  font-size: 0.8em;
+  line-height: 1; }
+  .footer__credit span {
+    color: #a50c07; }
+
+@font-face {
+  font-family: 'MorePerfectDOSVGA';
+  src: url(http://laemeur.sdf.org/fonts/MorePerfectDOSVGA.ttf); }
+
+html {
+  height: 100%; }
+
+body {
+  height: 100%;
+  background: url(https://res.cloudinary.com/dt4qeehms/image/upload/v1492049775/calculator/bgpattern.jpg) repeat;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
+button {
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
